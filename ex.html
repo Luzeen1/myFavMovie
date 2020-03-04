@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>MoviesWebSite</title>
+    
+    <link rel="stylesheet" type="text/css" href="styleForFavMovies.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="favMovies.js"></script>
+
+</head>
+<body background=".\images\imgOfMovie.jpg">
+    <form class="container" >
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Movie Comment</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Contact US</a></li>
+                <li><a href="#">About Us</a></li>
+                </ul>
+               </ul>
+              <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+            </div>
+          </nav>
+          
+        <h1> My Favorite Movies </h1>
+        <br><br><br><br>
+        <label >Your Movie :</label>
+        <input type="text" id="movieTitle" placeholder="Movie Title" size="25" list="listOfMovies"> &nbsp;&nbsp;
+        <label >Rate It :</label>
+        <input type="number" min ="0" max="10" id="movieRate" placeholder = "Rate the movie from 0-10" > 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id="addMovieBtn" class="btn btn-primary">Add Movie</button> <br><br><br>
+
+
+        <table id="moviesTable" class="table searchable sortable">
+            <thead>
+            <tr>
+            <th id="title">Title <span class="glyphicon glyphicon-sort"></span></th>
+            <th id="rate">Rating <span class="glyphicon glyphicon-sort"></span></th>
+            <th id="delete">Delete</th>
+        </tr>
+    </thead>
+  <tbody></tbody>  
+ </table>
+
+<datalist id="listOfMovies"> </datalist>
+</form>
+</body>
+</html>
